@@ -27,8 +27,9 @@
 int main(int argc, char** argv) {
   // We indicate that the channel isn't authenticated (use of
   // InsecureChannelCredentials()).
+  std::string port = argc > 1 ? argv[1] : "50051";
   std::unique_ptr<helloworld::Greeter::Stub> stub = helloworld::Greeter::NewStub(
-      grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+      grpc::CreateChannel("localhost:" + port, grpc::InsecureChannelCredentials()));
   std::string user("world");
 
   // Data we are sending to the server.

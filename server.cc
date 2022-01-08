@@ -45,12 +45,13 @@ class GreeterServiceImpl final : public helloworld::Greeter::Service {
   }
 };
 
-int main() {
+int main(int argc, char** argv) {
   grpc::EnableDefaultHealthCheckService(true);
   grpc::reflection::InitProtoReflectionServerBuilderPlugin();
   grpc::ServerBuilder builder;
   // Listen on the given address without any authentication mechanism.
-  std::string server_address = "0.0.0.0:50051";
+  std::string port = argc > 1 ? argv[1] : "50051";
+  std::string server_address = "0.0.0.0:" + port;
   builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
   // Register "service" as the instance through which we'll communicate with
   // clients. In this case it corresponds to an *synchronous* service.
