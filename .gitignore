@@ -1,0 +1,11 @@
+*
+
+!*/
+!*.cc
+!*.h
+!*.md
+!*.proto
+!.gitignore
+!.bazelrc
+!BUILD
+!WORKSPACE
