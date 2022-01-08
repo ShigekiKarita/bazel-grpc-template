@@ -4,8 +4,10 @@
 !*.cc
 !*.h
 !*.md
+!*.py
 !*.proto
 !.gitignore
 !.bazelrc
 !BUILD
 !WORKSPACE
+!LICENSE

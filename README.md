@@ -2,6 +2,4 @@
 
 [WORKSPACE](WORKSPACE) template to run the gRPC [quick start](https://grpc.io/docs/languages/cpp/quickstart/).
 
-## LICENSE
-
-See header docs in .cc files forked from the quick start codes.
+To test, run `bazel test :all`

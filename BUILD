@@ -38,3 +38,15 @@ cc_binary(
         "//:helloworld_cc_grpc",
     ],
 )
+
+py_test(
+    name = "test",
+    size = "small",
+    srcs = ["test.py"],
+    data = [
+        ":cc_client",
+        ":cc_server",
+    ],
+    python_version = "PY3",
+    srcs_version = "PY3",
+)
