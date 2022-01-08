@@ -6,6 +6,7 @@
 !*.md
 !*.py
 !*.proto
+!*.yml
 !.gitignore
 !.bazelrc
 !BUILD

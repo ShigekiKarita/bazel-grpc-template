@@ -16,6 +16,7 @@ rules_proto_toolchains()
 
 http_archive(
     name = "com_github_grpc_grpc",
+    sha256 = "9647220c699cea4dafa92ec0917c25c7812be51a18143af047e20f3fb05adddc",
     urls = [
         "https://github.com/grpc/grpc/archive/refs/tags/v1.43.0.tar.gz"
     ],
